@@ -1,144 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maryam Attique | AI Student</title>
 
-    <title>Maryam Attique | AI Student & ML Enthusiast</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f8fc;
-            color: #222;
-            line-height: 1.6;
-        }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #11172a;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #29304a;
+}
 
-        header {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            color: white;
-            text-align: center;
-            padding: 90px 20px;
-        }
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a78bfa;
+}
 
-        header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        header p {
-            font-size: 20px;
-            opacity: 0.95;
-        }
+nav a:hover {
+    color: #a78bfa;
+}
 
-        nav {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #171c3a, #0b1020);
+}
 
-        nav a {
-            color: #4f46e5;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
 
-        nav a:hover {
-            color: #7c3aed;
-        }
+.hero h1 span {
+    color: #a78bfa;
+}
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #b8bfd3;
+    font-size: 20px;
+}
 
-        section h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 35px;
-            color: #4f46e5;
-        }
+.buttons {
+    margin-top: 30px;
+}
 
-        .about {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-            text-align: center;
-            font-size: 18px;
-        }
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 7px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-        }
+.primary {
+    background: #7c5ce0;
+    color: white;
+}
 
-        .skill {
-            background: #e9e7ff;
-            color: #4f46e5;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-        }
+.secondary {
+    border: 1px solid #7c5ce0;
+    color: #c4b5fd;
+}
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 20px;
+}
 
-        .project {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            transition: transform 0.3s;
-        }
+h2 {
+    color: #a78bfa;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
 
-        .project:hover {
-            transform: translateY(-7px);
-        }
+.about {
+    background: #11172a;
+    border: 1px solid #29304a;
+    border-radius: 18px;
+    padding: 30px;
+    color: #c5cada;
+}
 
-        .project h3 {
-            color: #4f46e5;
-            margin-bottom: 10px;
-        }
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
 
-        .project p {
-            color: #555;
-            margin-bottom: 18px;
-        }
+.skill {
+    background: #171e35;
+    border: 1px solid #343d5c;
+    color: #c4b5fd;
+    padding: 10px 17px;
+    border-radius: 25px;
+}
 
-        .project a {
-            display: inline-block;
-            background: #4f46e5;
-            color: white;
-            text-decoration: none;
-            padding: 9px 16px;
-            border-radius: 8px;
-        }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
 
-        .project a:hover {
-            background: #7c3aed;
-        }
+.project {
+    background: #11172a;
+    border: 1px solid #29304a;
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.3s;
+}
 
-        .contact {
-            text-align: center;
-            background: white;
-            border-radius: 15px;
-            padding:
+.project:hover {
+    transform: translateY(-6px);
+    border-color: #8067d9;
+}
+
+.project h3 {
+    color: #c4b5fd;
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: #aeb6cb;
+    margin-bottom: 18px;
+}
+
+.project a {
+    color: #a78bfa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact {
+    text-align: center;
+    background: #11172a;
+    border: 1px solid #29304a;
+    border-radius: 20px;
+    padding: 45px 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #858da5;
+    border-top: 1px solid #29304a;
+}
+
+@media (max-width: 700px) {
+    nav div:last-child {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Maryam Attique</div>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <div>
+        <h1>Hi, I'm <span>Maryam</span> 👋</h1>
+
+        <p>
+            Artificial Intelligence Student passionate about
+            Machine Learning, Deep Learning and building
+            real-world AI solutions.
+        </p>
+
+        <div class="buttons">
+            <a class="btn primary"
+               href="https://github.com/Maryam0599"
+               target="_blank">
+               GitHub
+            </a>
+
+            <a class="btn secondary"
+               href="https://www.linkedin.com/in/maryam-attique-8b32053b0"
+               target="_blank">
+               LinkedIn
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a 2nd Year Artificial Intelligence student at the
+            University of Agriculture Faisalabad. I enjoy learning
+            Artificial Intelligence through practical projects.
+        </
